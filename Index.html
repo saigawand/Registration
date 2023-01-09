@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <title>
+    Registration form
+  </title>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgb(216, 211, 211);
+}
+h1{
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+.container {
+  padding: 16px;
+  background-color: rgb(255, 255, 255);
+}
+input[type=text], input[type=password], input[type=date]:focus, select {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #cdcdcd;
+}
+
+input[type=text]:focus, input[type=password]:focus, select{
+  background-color: rgb(81, 188, 238);
+  outline: none;
+}
+hr {
+  border: 1px solid #ffffff;
+  margin-bottom: 25px;
+}
+.registerbtn {
+  background-color: #f9a909;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+a {
+  color: dodgerblue;
+}
+</style>
+</head>
+<body>
+
+<form action="/action_page.php">
+  <div class="container">
+    <h1>COLLEGE REGISTRATION FORM</h1>
+    <label for="Name"><b>Full name:</b></label>
+    <input type="text" placeholder="Enter name" name="Name" id="Name" required>
+
+    <label for="Age"><b>Age:</b></label>
+    <input type="text" placeholder="Enter age" name="Age" id="Age" required>
+
+    <label for="Gender"><b>Gender:</b></label><br><br>
+    <input type=radio name=initial checked>Male
+    <input type=radio name=initial>Female<br><br><br>
+
+    <label for="name"><b>Enter Date of Birth:</b></label><br><br>
+    <input type="date" id="last name" 
+           style="width: 200px;">
+           <br><br><br>
+           <b>Select Courses</b><br>
+    <select name ="course">
+      <option value="none"></option>
+      <option value="Bsc">BSC</option>
+      <option value="Btech">BTECH</option>
+      <option value="M.sc">M.SC</option>
+    </select><br><br>
+
+    <label for="email"><b>Email:</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+    
+    <label for="phone number"><b>Phone number:</b></label>
+    <input type="text" placeholder="Enter phone number" name="phone number" id="phone number" required>
+
+    <label for="Address"><b>Current address:</b></label>
+    <input type="text" placeholder="Enter current address " name="Address" id="Address" required>
+
+    <label for="Date of registeration"><b>Date of Registration:</b></label>
+    <input type="text" placeholder="Enter date " name="date" id="Date" required>
+
+    <label for="psw"><b>Create password:</b>(to login to registration form)</label>
+    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+    <label for="psw-repeat"><b>Repeat Password:</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+    <button onclick="myFunction()" type="submit" class="registerbtn">Register</button>
+    <script>
+      function myFunction() {
+        alert("Confirm Registration!");
+      }
+      </script>
+  </div>
+</form>
+
+</body>
+</html>
